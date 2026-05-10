@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliz Dia das Mães</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#ffd6e7,#fff0f5,#efe1ff);
+      padding:20px;
+    }
+
+    .container{
+      width:100%;
+      max-width:1000px;
+      background:rgba(255,255,255,0.8);
+      backdrop-filter:blur(10px);
+      border-radius:40px;
+      padding:50px 30px;
+      text-align:center;
+      box-shadow:0 20px 50px rgba(0,0,0,0.15);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .glow{
+      position:absolute;
+      top:-100px;
+      left:0;
+      width:100%;
+      height:250px;
+      background:linear-gradient(to right,#ff5fa2,#ff7eb3,#b56bff);
+      opacity:0.2;
+      filter:blur(80px);
+    }
+
+    .heart{
+      font-size:70px;
+      animation:float 2s infinite;
+      position:relative;
+      z-index:2;
+    }
+
+    @keyframes float{
+      0%{transform:translateY(0);}
+      50%{transform:translateY(-10px);}
+      100%{transform:translateY(0);}
+    }
+
+    h1{
+      font-size:55px;
+      color:#333;
+      margin-top:20px;
+      position:relative;
+      z-index:2;
+    }
+
+    .subtitle{
+      font-size:22px;
+      color:#666;
+      margin-top:20px;
+      line-height:1.6;
+      position:relative;
+      z-index:2;
+    }
+
+    .cards{
+      margin-top:50px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+      position:relative;
+      z-index:2;
+    }
+
+    .card{
+      background:white;
+      padding:30px 20px;
+      border-radius:25px;
+      transition:0.4s;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .card:hover{
+      transform:translateY(-10px) scale(1.03);
+    }
+
+    .card span{
+      font-size:50px;
+    }
+
+    .card h2{
+      margin-top:15px;
+      color:#ff4f93;
+    }
+
+    .card p{
+      margin-top:10px;
+      color:#666;
+      line-height:1.5;
+    }
+
+    .message{
+      margin-top:50px;
+      padding:40px;
+      border-radius:30px;
+      background:linear-gradient(135deg,#ff5fa2,#ff7eb3,#b56bff);
+    }
+
+    .message-content{
+      background:white;
+      padding:40px;
+      border-radius:25px;
+    }
+
+    .message h3{
+      font-size:35px;
+      color:#333;
+      margin-bottom:20px;
+    }
+
+    .message p{
+      font-size:20px;
+      color:#666;
+      line-height:1.8;
+    }
+
+    .love{
+      margin-top:25px;
+      font-size:30px;
+      color:#ff4f93;
+      font-weight:bold;
+    }
+
+    button{
+      margin-top:40px;
+      padding:18px 45px;
+      border:none;
+      border-radius:50px;
+      background:linear-gradient(to right,#ff4f93,#ff6f91);
+      color:white;
+      font-size:22px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 10px 30px rgba(255,79,147,0.4);
+    }
+
+    button:hover{
+      transform:scale(1.08);
+    }
+
+    @media(max-width:768px){
+      h1{
+        font-size:40px;
+      }
+
+      .subtitle{
+        font-size:18px;
+      }
+
+      .message h3{
+        font-size:28px;
+      }
+
+      .message p{
+        font-size:18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="glow"></div>
+
+    <div class="heart">💖</div>
+
+    <h1>Feliz Dia das Mães</h1>
+
+    <p class="subtitle">
+      Hoje é um dia especial para agradecer por todo amor,
+      carinho, força e dedicação.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <span>🌸</span>
+        <h2>Amor</h2>
+        <p>
+          Seu amor ilumina todos os dias da minha vida.
+        </p>
+      </div>
+
+      <div class="card">
+        <span>✨</span>
+        <h2>Inspiração</h2>
+        <p>
+          Você é exemplo de força, coragem e dedicação.
+        </p>
+      </div>
+
+      <div class="card">
+        <span>💝</span>
+        <h2>Gratidão</h2>
+        <p>
+          Obrigado por tudo o que você faz por mim todos os dias.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="message">
+      <div class="message-content">
+
+        <h3>Uma mensagem especial 💌</h3>
+
+        <p>
+          Mãe, você é a pessoa mais importante da minha vida.
+          Obrigado por cada conselho, abraço e momento especial.
+          Seu amor é meu maior presente.
+        </p>
+
+        <div class="love">
+          Eu te amo infinitamente ❤️
+        </div>
+
+      </div>
+    </div>
+
+    <button onclick="mostrarMensagem()">
+      Clique aqui 🌷
+    </button>
+
+  </div>
+
+  <script>
+    function mostrarMensagem(){
+      alert("💖 Feliz Dia das Mães! Você é incrível! 💖");
+    }
+  </script>
+
+</body>
+</html>
